@@ -25,7 +25,7 @@ Start App
 
 ## To run frontend
 
-> ``` cd frontend```
+> ``` cd frontend/poke-react```
 
 > ``` yarn install```
 
