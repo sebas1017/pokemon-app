@@ -1,0 +1,14 @@
+version: '3'
+services:
+  pokemon-api-service:
+      build: ./backend
+      ports:
+        - 8000:8000
+      container_name: api_pokemon
+  website:
+    build: ./frontend/poke-react
+    ports:
+      - 3000:3000
+    depends_on:
+      - pokemon-api-service
+    container_name: website-pokemon-cards
