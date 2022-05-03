@@ -30,11 +30,7 @@ class App extends Component {
   getMorePokemon() {
     let url = "/api/v1/all_pokemons"
     console.log(url);
-    fetch(url, {
-      mode: 'cors',
-      headers: {
-        'Access-Control-Allow-Origin':'*'}
-      })
+    fetch(url)
     .then(response => response.json())
     .then(data => {
       if (data) {

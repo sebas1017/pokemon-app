@@ -9,11 +9,7 @@ const PokeCard = ({pokemon}) => {
   function getAbilitie(e) {
    
     const url = `/api/v1/names_abilities/${e}`
-    fetch(url,{
-      mode: 'cors',
-      headers: {
-        'Access-Control-Allow-Origin':'*'}
-      })
+    fetch(url)
     .then(response => response.json())
     .then(data => {
       if (data) {
