@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   getMorePokemon() {
-    let url = "http://localhost:8000/api/v1/all_pokemons"
+    let url = "http://0.0.0.0:8000/api/v1/all_pokemons"
     console.log(url);
     fetch(url)
     .then(response => response.json())

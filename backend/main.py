@@ -7,7 +7,8 @@ app = FastAPI()
 origins = [
    "http://localhost:3000",
    "*",
-   "http://localhost"
+   "http://localhost",
+   "website-pokemon-cards"
 ]
 app.add_middleware(
     CORSMiddleware,
