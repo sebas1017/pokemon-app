@@ -27,7 +27,6 @@ async def root( ):
 @app.get("/api/v1/all_pokemons")
 async def root( response: Response):
     results = []
-    response.headers["Access-Control-Allow-Origin"] = "*"
     try:
         for pokemon in pokemons:
             response_pokemon = requests.get(f"https://pokeapi.co/api/v2/pokemon/{pokemon}")
@@ -53,7 +52,6 @@ async def root( response: Response):
 async def names_abilities(pokemon: str, response: Response):
     results=[]
     url = f"https://pokeapi.co/api/v2/pokemon/{pokemon}"
-    response.headers["Access-Control-Allow-Origin"] = "*"
     try:
         data = requests.get(url)
         if data.status_code==200:
