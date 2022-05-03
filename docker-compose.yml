@@ -1,23 +1,19 @@
 version: '2'
 services:
-  website-pokemon-cards:
-    build: ./frontend/poke-react
-    ports:
-      - "3000:3000"
-    networks:
-      - proxynet
-    depends_on:
-      - pokemon-api-service
-    container_name: website-pokemon-cards
-
   pokemon-api-service:
     build: ./backend
     ports:
       - "8000:8000"
-    networks:
-      - proxynet
     container_name: pokemon-api-service
 
-networks:
-  proxynet:
-    driver: bridge
+
+  website-pokemon-cards:
+    build: ./frontend/poke-react
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pokemon-api-service
+    container_name: website-pokemon-cards
+
+
+

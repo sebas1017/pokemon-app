@@ -10,7 +10,7 @@ ENV PATH /poke-react/node_modules/.bin:$PATH
 COPY package.json ./
 
 COPY package-lock.json ./
-
+EXPOSE 3000
 RUN npm install
 
 # add app
