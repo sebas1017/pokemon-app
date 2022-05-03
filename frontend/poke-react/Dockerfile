@@ -3,7 +3,7 @@ FROM node:12.2.0-alpine
 
 # set the working direction
 WORKDIR /poke-react
-
+EXPOSE 3000:3000
 # add `/app/node_modules/.bin` to $PATH
 ENV PATH /poke-react/node_modules/.bin:$PATH
 
