@@ -2,7 +2,7 @@
   "name": "poke-react",
   "version": "0.1.0",
   "proxy": "http://pokemon-api-service:8000",
-  "private": false,
+  "private": true,
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
