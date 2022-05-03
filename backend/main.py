@@ -4,15 +4,11 @@ from fastapi.middleware.cors import CORSMiddleware
 import requests
 import uvicorn
 app = FastAPI()
-origins = [
-   "http://localhost:3000",
-   "*",
-   "http://localhost",
-   "website-pokemon-cards"
-]
+
 app.add_middleware(
+
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
